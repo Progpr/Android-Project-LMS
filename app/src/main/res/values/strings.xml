@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MAD_Project</string>
+    <string name="app_title">Library Management App</string>
+    <string name="tag">An entire library now in your pocket</string>
+</resources>
