@@ -36,6 +36,23 @@ public class login extends AppCompatActivity {
         TextInputEditText edd1 = (TextInputEditText) findViewById(R.id.ed1);
         TextInputEditText edd2 = (TextInputEditText) findViewById(R.id.ed2);
 
+        btt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String username = edd1.getText().toString();
+                String password = edd2.getText().toString();
+
+                if(username.length() == 0){
+                    edd1.requestFocus();
+                    edd1.setError("Username cannot be empty");
+                }
+                if(password.length()==0){
+                    edd2.requestFocus();
+                    edd2.setError("Password cannot be empty");
+                }
+            }
+        });
+
     }
 
 }
