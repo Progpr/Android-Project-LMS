@@ -46,10 +46,19 @@ public class login extends AppCompatActivity {
                     edd1.requestFocus();
                     edd1.setError("Username cannot be empty");
                 }
-                if(password.length()==0){
+                else if(password.length()==0){
                     edd2.requestFocus();
                     edd2.setError("Password cannot be empty");
                 }
+                else if(!password.matches("[0-9]+")) {
+                    edd2.requestFocus();
+                    edd2.setError("Password must contain at least one numeric character");
+                }
+                else if(!password.matches("[A-Z]+")){
+                    edd2.requestFocus();
+                    edd2.setError("Password must contain at least one uppercase letter");
+                }
+                else if(!password.matches(""));
             }
         });
 
