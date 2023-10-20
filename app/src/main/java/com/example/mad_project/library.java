@@ -6,7 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 public class library extends AppCompatActivity {
-    Intent ii2 = getIntent();
+
+    //Hi Abbas here
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
