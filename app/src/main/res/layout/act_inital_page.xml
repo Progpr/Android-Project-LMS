@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".library">
+    tools:context=".library"
+    android:background="@color/red">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="40dp" 
-        android:background="#FF0000" 
+        android:background="@color/white"
         android:id="@+id/redRectangle"/>
 
 
@@ -23,9 +24,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Scan QR code to enter registry"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="15dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="280dp"
         android:padding="16dp"
+        android:textColor="@color/white"
         />
 
 
@@ -44,26 +49,31 @@
         android:layout_height="1dp"
         android:layout_marginTop="370dp"
         android:layout_marginBottom="8dp"
-        android:background="#000000" />
+        android:background="#000000"
+        />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="List of books borrowed"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="15dp"
         android:layout_below="@id/textView1"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="280dp"
         android:layout_centerHorizontal="true"
         android:padding="16dp"
+        android:textColor="@color/white"
         />
 
     <ImageButton
         android:id="@+id/imb2"
-        android:layout_width="309dp"
-        android:layout_height="249dp"
-        android:layout_marginTop="380dp"
-        android:src="@drawable/book"
-        android:layout_centerHorizontal="true" />
+        android:layout_width="210dp"
+        android:layout_height="190dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:src="@drawable/book" />
 
 
 
