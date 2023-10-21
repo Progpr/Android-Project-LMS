@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".library">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp" 
+        android:background="#FF0000" 
+        android:id="@+id/redRectangle"/>
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan QR code to enter registry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="280dp"
+        android:padding="16dp"
+        />
+
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imb1"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/scan"
+        android:layout_marginTop="60dp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginBottom="8dp"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List of books borrowed"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        />
+
+    <ImageButton
+        android:id="@+id/imb2"
+        android:layout_width="309dp"
+        android:layout_height="249dp"
+        android:layout_marginTop="380dp"
+        android:src="@drawable/book"
+        android:layout_centerHorizontal="true" />
+
+
+
+
+</RelativeLayout>
