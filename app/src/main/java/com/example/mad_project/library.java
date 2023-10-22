@@ -30,14 +30,9 @@ public class library extends AppCompatActivity {
         spn.setAdapter(adapter);
     }
 
-    //public void qr(View view)
+    public void book(View view)
     {
-        //Intent i=new Intent(library.this, qr.class);
-       // startActivity(i);
-    }
-    //public void book(View view)
-    {
-      //  Intent i=new Intent(library.this, book.class);
-       // startActivity(i);
+      Intent i=new Intent(library.this, main_book.class);
+      startActivity(i);
     }
 }
