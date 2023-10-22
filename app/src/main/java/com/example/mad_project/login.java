@@ -61,6 +61,10 @@ public class login extends AppCompatActivity {
                     edd2.requestFocus();
                     edd2.setError("Passowrd must contain smallcase characters");
                 }
+
+                Intent i=new Intent(login.this, library.class);
+                startActivity(i);
+
             }
         });
 

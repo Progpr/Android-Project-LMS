@@ -9,10 +9,9 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="40dp" 
+        android:layout_height="40dp"
         android:background="@color/white"
         android:id="@+id/redRectangle"/>
-
 
     <Spinner
         android:id="@+id/spinner"
@@ -41,7 +40,9 @@
         android:id="@+id/imb1"
         android:layout_centerHorizontal="true"
         android:src="@drawable/scan"
-        android:layout_marginTop="60dp" />
+        android:layout_marginTop="60dp"
+        android:onClick="qr"
+        />
 
 
     <View
@@ -73,7 +74,9 @@
         android:layout_height="190dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="400dp"
-        android:src="@drawable/book" />
+        android:src="@drawable/book"
+        android:onClick="book"
+        />
 
 
 
