@@ -2,4 +2,12 @@
     <string name="app_name">MAD_Project</string>
     <string name="app_title">Library Management App</string>
     <string name="tag">An entire library now in your pocket</string>
+    <string-array name="spinner_items_array">
+        <item>Hello User</item>
+        <item>History</item>
+        <item>Due Amount To be Paid</item>
+        <item>Latest books available</item>
+        <item>Search for books</item>
+
+    </string-array>
 </resources>
