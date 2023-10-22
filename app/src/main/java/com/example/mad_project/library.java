@@ -21,12 +21,12 @@ public class library extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_inital_page);
+        spn= (Spinner) findViewById(R.id.spinner);
 
         imb1= (ImageButton) findViewById(R.id.imb1);
         imb2= (ImageButton) findViewById(R.id.imb2);
-        spn= (Spinner) findViewById(R.id.spinner);
 
-        String[] sections={"Hello User","History", "Due Amount to be Paid", "Check Latest books", "Search for books."};
+        String[] sections={"Hello User","Home","History", "Due Amount to be Paid", "Check Latest books", "Search for books."};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sections);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spn.setAdapter(adapter);
@@ -35,16 +35,22 @@ public class library extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedSection = (String) parentView.getItemAtPosition(position);
-                if (selectedSection.equals("Hello User")) {
-                    Toast.makeText(library.this, "Hello User selected", Toast.LENGTH_SHORT).show();
-                } else if (selectedSection.equals("History")) {
+                if (selectedSection.equals("History")) {
                     Intent intent = new Intent(library.this, HistoryActivity.class);
                     startActivity(intent);
-                } else if (selectedSection.equals("Due Amount to be Paid")) {
+                } else if (selectedSection.equals("Home")) {
+                    Intent intent = new Intent(library.this, library.class);
+                    startActivity(intent);
+                }
+                else if (selectedSection.equals("Due Amount to be Paid")) {
                     Intent intent = new Intent(library.this, DueAmountActivity.class);
                     startActivity(intent);
                 } else if (selectedSection.equals("Check Latest books")) {
                     Intent intent = new Intent(library.this, LatestBooksActivity.class);
+                    startActivity(intent);
+                } else if((selectedSection.equals("Search for books")))
+                {
+                    Intent intent=new Intent(library.this, SearchBooksActivity.class);
                     startActivity(intent);
                 }
             }
@@ -56,12 +62,11 @@ public class library extends AppCompatActivity {
     }
     public void book(View view) {
         try {
-            Intent i = new Intent(library.this, main_book.class);
-            startActivity(i);
+            Intent i2 = new Intent(library.this, main_book.class);
+            startActivity(i2);
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(this, "Error occurred: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
-
 }
