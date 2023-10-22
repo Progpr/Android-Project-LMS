@@ -35,13 +35,13 @@
 
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/imb1"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/scan"
-        android:layout_marginTop="60dp"
-        android:onClick="qr"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/Qricon"
+        android:scaleType="fitCenter"
         />
 
 
@@ -57,7 +57,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="List of books borrowed"
+        android:text="Books borrowed till now"
         android:fontFamily="monospace"
         android:textStyle="bold"
         android:textSize="15dp"
@@ -70,15 +70,13 @@
 
     <ImageButton
         android:id="@+id/imb2"
-        android:layout_width="210dp"
-        android:layout_height="190dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/book"
-        android:onClick="book"
+        android:layout_marginTop="450dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/books"
         />
-
-
 
 
 </RelativeLayout>
