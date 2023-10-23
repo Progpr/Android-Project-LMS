@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-public class library extends AppCompatActivity {
+public class library extends AppCompatActivity{
 
     ImageButton Qr, Books;
     @Override
@@ -28,7 +28,7 @@ public class library extends AppCompatActivity {
             public void onClick(View v) {
                 IntentIntegrator intentintegrator = new IntentIntegrator(library.this);
                 intentintegrator.setOrientationLocked(true);
-                intentintegrator.setPrompt("Scan a QR Code");
+                intentintegrator.setPrompt("Scan the QR Code");
                 intentintegrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
                 intentintegrator.initiateScan();
             }

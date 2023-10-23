@@ -70,4 +70,9 @@ public class login extends AppCompatActivity {
 
     }
 
+    public void register(View view){
+        Intent ii = new Intent(login.this,register.class);
+        startActivity(ii);
+    }
+
 }
