@@ -76,6 +76,7 @@
         android:layout_marginTop="450dp"
         android:scaleType="fitCenter"
         android:src="@drawable/books"
+        android:onClick="books"
         />
 
 
