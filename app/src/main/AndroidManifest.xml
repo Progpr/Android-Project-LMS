@@ -5,8 +5,8 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
-    <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -18,13 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Project"
         tools:targetApi="31">
-
-        <activity android:name=".main_book" android:exported="false"/>
-        <activity android:name=".DueAmountActivity" android:exported="false" />
-        <activity android:name=".HistoryActivity" android:exported="false" />
-        <activity android:name=".LatestBooksActivity" android:exported="false"/>
-        <activity android:name=".SearchBooksActivity" android:exported="false"/>
-
+        <activity
+            android:name=".register"
+            android:exported="false" />
         <activity
             android:name=".library"
             android:exported="false" />
@@ -34,8 +30,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
