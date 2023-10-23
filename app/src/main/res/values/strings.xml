@@ -4,6 +4,7 @@
     <string name="tag">An entire library now in your pocket</string>
     <string-array name="spinner_items_array">
         <item>Hello User</item>
+        <item>Home</item>
         <item>History</item>
         <item>Due Amount To be Paid</item>
         <item>Latest books available</item>

@@ -9,15 +9,15 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DueAmountActivity extends AppCompatActivity {
+public class SearchBooksActivity extends AppCompatActivity {
 
     Spinner spn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_dueamt);
-        spn2= (Spinner) findViewById(R.id.spn2);
+        setContentView(R.layout.act_searchbar);
+        spn2= (Spinner) findViewById(R.id.spn4);
 
         String[] sections={"Hello User","History", "Due Amount to be Paid", "Check Latest books", "Search for books."};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sections);
@@ -28,23 +28,22 @@ public class DueAmountActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedSection = (String) parentView.getItemAtPosition(position);
-                if(selectedSection.equals("Home"))
-                {
-                    Intent intent=new Intent(DueAmountActivity.this, library.class);
+                if(selectedSection.equals("Home")){
+                    Intent intent= new Intent(SearchBooksActivity.this, library.class);
                     startActivity(intent);
                 }
-                if (selectedSection.equals("History")) {
-                    Intent intent = new Intent(DueAmountActivity.this, HistoryActivity.class);
+                else if (selectedSection.equals("History")) {
+                    Intent intent = new Intent(SearchBooksActivity.this, HistoryActivity.class);
                     startActivity(intent);
                 } else if (selectedSection.equals("Due Amount to be Paid")) {
-                    Intent intent = new Intent(DueAmountActivity.this, DueAmountActivity.class);
+                    Intent intent = new Intent(SearchBooksActivity.this, DueAmountActivity.class);
                     startActivity(intent);
                 } else if (selectedSection.equals("Check Latest books")) {
-                    Intent intent = new Intent(DueAmountActivity.this, LatestBooksActivity.class);
+                    Intent intent = new Intent(SearchBooksActivity.this, LatestBooksActivity.class);
                     startActivity(intent);
                 } else if((selectedSection.equals("Search for books")))
                 {
-                    Intent intent=new Intent(DueAmountActivity.this, SearchBooksActivity.class);
+                    Intent intent=new Intent(SearchBooksActivity.this, SearchBooksActivity.class);
                     startActivity(intent);
                 }
             }
