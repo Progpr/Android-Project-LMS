@@ -4,4 +4,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#df2c14</color>
     <color name="grey">#888888</color>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:iconifiedByDefault">false</item>
+    </style>
+
 </resources>

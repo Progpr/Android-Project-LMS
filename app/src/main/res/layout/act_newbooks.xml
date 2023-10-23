@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:id="@+id/redRectangle"/>
+
+    <Spinner
+        android:id="@+id/spn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black"
+        />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TableRow>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Sr No"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:id="@+id/tvv1"
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="900dp"
+                android:layout_marginStart="30dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Name"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textColor="@color/white"
+                android:id="@+id/tvv2"
+                android:textSize="15sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="900dp"
+                android:background="@android:color/white"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/tvv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginTop="30dp"
+                android:text="Fee charged"
+                android:textSize="15dp"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="900dp"
+                android:layout_marginStart="30dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginTop="30dp"
+                android:text="Reason"
+                android:textSize="15sp"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/black"
+                />
+
+        </TableRow>
+    </TableLayout>
+
+
+</RelativeLayout>

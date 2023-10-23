@@ -40,7 +40,7 @@
         android:id="@+id/imb1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
-        android:src="@drawable/Qricon"
+        android:src="@drawable/qricon"
         android:scaleType="fitCenter"
         />
 
