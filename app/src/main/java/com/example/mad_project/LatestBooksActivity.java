@@ -26,7 +26,10 @@ public class LatestBooksActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedSection = (String) parentView.getItemAtPosition(position);
 
-
+                if(selectedSection.equals("Hoome")){
+                    Intent intent=new Intent(LatestBooksActivity.this, library.class);
+                    startActivity(intent);
+                }
                 if (selectedSection.equals("History")) {
                     Intent intent = new Intent(LatestBooksActivity.this, HistoryActivity.class);
                     startActivity(intent);
@@ -37,6 +40,9 @@ public class LatestBooksActivity extends AppCompatActivity {
                 } else if (selectedSection.equals("Check Latest books")) {
                     // Open Latest Books activity
                     Intent intent = new Intent(LatestBooksActivity.this, LatestBooksActivity.class);
+                    startActivity(intent);
+                } else if (selectedSection.equals("Search for books")) {
+                    Intent intent=new Intent(LatestBooksActivity.this, SearchBooksActivity.class);
                     startActivity(intent);
                 }
             }

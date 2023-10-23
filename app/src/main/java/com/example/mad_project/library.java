@@ -48,7 +48,7 @@ public class library extends AppCompatActivity {
                 } else if (selectedSection.equals("Check Latest books")) {
                     Intent intent = new Intent(library.this, LatestBooksActivity.class);
                     startActivity(intent);
-                } else if((selectedSection.equals("Search for books")))
+                } else if(selectedSection.equals("Search for books"))
                 {
                     Intent intent=new Intent(library.this, SearchBooksActivity.class);
                     startActivity(intent);

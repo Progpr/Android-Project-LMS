@@ -28,6 +28,11 @@ public class DueAmountActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedSection = (String) parentView.getItemAtPosition(position);
+                if(selectedSection.equals("Home"))
+                {
+                    Intent intent=new Intent(DueAmountActivity.this, library.class);
+                    startActivity(intent);
+                }
                 if (selectedSection.equals("History")) {
                     Intent intent = new Intent(DueAmountActivity.this, HistoryActivity.class);
                     startActivity(intent);

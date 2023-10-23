@@ -29,8 +29,11 @@ public class main_book extends AppCompatActivity
                 public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                     String selectedSection = (String) parentView.getItemAtPosition(position);
 
-
-                        if (selectedSection.equals("History")) {
+                    if(selectedSection.equals("Home")){
+                        Intent intent=new Intent(main_book.this, library.class);
+                        startActivity(intent);
+                    }
+                    else if (selectedSection.equals("History")) {
                             Intent intent = new Intent(main_book.this, HistoryActivity.class);
                             startActivity(intent);
                     } else if (selectedSection.equals("Due Amount to be Paid")) {
@@ -40,6 +43,9 @@ public class main_book extends AppCompatActivity
                     } else if (selectedSection.equals("Check Latest books")) {
                         // Open Latest Books activity
                         Intent intent = new Intent(main_book.this, LatestBooksActivity.class);
+                        startActivity(intent);
+                    } else if (selectedSection.equals("Search for books")) {
+                        Intent intent=new Intent(main_book.this, SearchBooksActivity.class);
                         startActivity(intent);
                     }
                 }
