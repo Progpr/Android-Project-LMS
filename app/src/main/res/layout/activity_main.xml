@@ -10,11 +10,12 @@
 
     <ImageView
         android:id="@+id/im1"
-        android:layout_width="800dp"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="27dp"
-        android:src="@drawable/nmimslogo" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/book"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,10 +23,11 @@
         android:id="@+id/tv1"
         android:layout_below="@id/im1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
         android:textSize="30dp"
         android:textColor="@color/white"
-        android:text=" Welcome to the NMIMS" />
+        android:text=" Welcome to" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,7 +36,7 @@
         android:layout_below="@id/tv1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:textSize="30dp"
+        android:textSize="48dp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:text="@string/app_title" />
@@ -42,24 +44,37 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/tv2"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:textStyle="italic"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:text="@string/tag"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bt1"
-        android:text="Continue"
+        android:text="Continue as Student"
         android:textSize="25dp"
         android:layout_centerHorizontal="true"
         android:textColor="@color/red"
         android:backgroundTint="@color/white"
-        android:layout_marginTop="550dp"
-        android:onClick="cont"/>
+        android:layout_marginTop="520dp"
+        android:onClick="user"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt2"
+        android:text="Continue as Admin"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/bt1"
+        android:textColor="@color/red"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="20dp"
+        android:onClick="admin"/>
 
 </RelativeLayout>

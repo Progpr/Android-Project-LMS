@@ -2,30 +2,62 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/book"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/book"
         android:supportsRtl="true"
         android:theme="@style/Theme.MAD_Project"
         tools:targetApi="31">
         <activity
-            android:name=".register"
+            android:name=".borrowbook"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_add"
+            android:exported="true" />
+        <activity
+            android:name=".Admin_Upload"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_Signup"
+            android:exported="false" />
+        <activity
+            android:name=".Admin_login"
+            android:exported="false" />
+        <activity
+            android:name=".scanpage"
+            android:exported="false" />
+        <activity
+            android:name=".main_book"
+            android:exported="false" />
+        <activity
+            android:name=".DueAmountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LatestBooksActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SearchBooksActivity"
             android:exported="false" />
         <activity
             android:name=".library"
             android:exported="false" />
         <activity
             android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".register"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

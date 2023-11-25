@@ -36,7 +36,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="Email ID"
             android:textColorHint="@color/white"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
@@ -91,12 +91,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:id="@+id/register"
-                android:text="Register"
+                android:text="Signup"
                 android:layout_marginStart="20dp"
                 android:textSize="23dp"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/red"
-                android:onClick="register"/>
+                android:onClick="signup"/>
 
         </LinearLayout>
 
