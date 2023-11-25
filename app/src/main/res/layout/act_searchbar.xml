@@ -7,11 +7,16 @@
     android:background="@color/red"
     tools:context=".MainActivity">
 
-    <Spinner
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:id="@+id/spn4"/>
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:text="Back"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv1"/>
 
     <SearchView
         android:id="@+id/searchView"

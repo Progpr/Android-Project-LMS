@@ -5,52 +5,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class DueAmountActivity extends AppCompatActivity {
 
-    Spinner spn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_dueamt);
-        spn2= (Spinner) findViewById(R.id.spn2);
+        TextView back= (TextView) findViewById(R.id.tv1);
 
-        String[] sections={"Hello User","History", "Due Amount to be Paid", "Check Latest books", "Search for books."};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sections);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spn2.setAdapter(adapter);
-
-        spn2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                String selectedSection = (String) parentView.getItemAtPosition(position);
-                if(selectedSection.equals("Home"))
-                {
-                    Intent intent=new Intent(DueAmountActivity.this, library.class);
-                    startActivity(intent);
-                }
-                if (selectedSection.equals("History")) {
-                    Intent intent = new Intent(DueAmountActivity.this, HistoryActivity.class);
-                    startActivity(intent);
-                } else if (selectedSection.equals("Due Amount to be Paid")) {
-                    Intent intent = new Intent(DueAmountActivity.this, DueAmountActivity.class);
-                    startActivity(intent);
-                } else if (selectedSection.equals("Check Latest books")) {
-                    Intent intent = new Intent(DueAmountActivity.this, LatestBooksActivity.class);
-                    startActivity(intent);
-                } else if((selectedSection.equals("Search for books")))
-                {
-                    Intent intent=new Intent(DueAmountActivity.this, SearchBooksActivity.class);
-                    startActivity(intent);
-                }
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-                // Do nothing here if no item is selected
+            public void onClick(View v) {
+                Intent i4 = new Intent(getApplicationContext(), library.class);
+                startActivity(i4);
             }
         });
     }

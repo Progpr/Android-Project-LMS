@@ -5,50 +5,68 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LatestBooksActivity extends AppCompatActivity {
-    Spinner spn3;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-    protected void onCreate(Bundle savedInstanceState)
-    {
+import java.util.ArrayList;
+
+public class LatestBooksActivity extends AppCompatActivity {
+
+
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_newbooks);
-        spn3= (Spinner) findViewById(R.id.spn3);
+        TextView back= (TextView) findViewById(R.id.back);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.spinner_items_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spn3.setAdapter(adapter);
-        spn3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                String selectedSection = (String) parentView.getItemAtPosition(position);
+            public void onClick(View v) {
+                Intent i4 = new Intent(getApplicationContext(), library.class);
+                startActivity(i4);
+            }
+        });
 
-                if(selectedSection.equals("Hoome")){
-                    Intent intent=new Intent(LatestBooksActivity.this, library.class);
-                    startActivity(intent);
+        ListView l =findViewById(R.id.lv);
+        final ArrayList<String> list = new ArrayList<>();
+        final ArrayAdapter ad = new ArrayAdapter<String>(this,
+                R.layout.listviewitems,R.id.tv1,list);
+        l.setAdapter(ad);
+        DatabaseReference ref =
+                FirebaseDatabase.getInstance().getReference().child("Books");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot parent) {
+                list.clear();
+
+                for (DataSnapshot child : parent.getChildren()) {
+                    updatehelper4 info = child.getValue(updatehelper4.class);
+                    String Title= info.getTitle();
+                    list.add(Title);
                 }
-                if (selectedSection.equals("History")) {
-                    Intent intent = new Intent(LatestBooksActivity.this, HistoryActivity.class);
-                    startActivity(intent);
-                } else if (selectedSection.equals("Due Amount to be Paid")) {
-                    // Open Due Amount activity
-                    Intent intent = new Intent(LatestBooksActivity.this, DueAmountActivity.class);
-                    startActivity(intent);
-                } else if (selectedSection.equals("Check Latest books")) {
-                    // Open Latest Books activity
-                    Intent intent = new Intent(LatestBooksActivity.this, LatestBooksActivity.class);
-                    startActivity(intent);
-                } else if (selectedSection.equals("Search for books")) {
-                    Intent intent=new Intent(LatestBooksActivity.this, SearchBooksActivity.class);
-                    startActivity(intent);
-                }
+                ad.notifyDataSetChanged();
             }
             @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-                // Do nothing here if no item is selected
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
+        Button btt2 = (Button) findViewById(R.id.b1);
+        btt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ii7 = new Intent(LatestBooksActivity.this,borrowbook.class);
+                startActivity(ii7);
             }
         });
     }

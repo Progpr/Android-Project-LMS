@@ -15,35 +15,35 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-public class library extends AppCompatActivity{
+import java.util.jar.Attributes;
 
-    ImageButton Qr, Books;
-    Spinner spn;
+public class library extends AppCompatActivity{
+//    ImageButton Qr, Books;
+//    Spinner spn;
+
+
+    public static String name2 = "name";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_inital_page);
 
-        Qr = findViewById(R.id.imb1);
-        Books = findViewById(R.id.imb2);
+        Intent ii3 = getIntent();
+        if (ii3 != null) {
+            // Check if the intent has the extra data you are trying to retrieve
+            String extraData = ii3.getStringExtra("your_key");
+        } else {
+            Toast.makeText(this, "null exception", Toast.LENGTH_SHORT).show();
+        }
 
-        Qr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                IntentIntegrator intentintegrator = new IntentIntegrator(library.this);
-                intentintegrator.setOrientationLocked(true);
-                intentintegrator.setPrompt("Scan the QR Code");
-                intentintegrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
-                intentintegrator.initiateScan();
-            }
-        });
+        String name = ii3.getStringExtra(login.Name);
 
-        spn= (Spinner) findViewById(R.id.spinner);
+        Spinner spn= (Spinner) findViewById(R.id.spinner);
 
-        Qr= (ImageButton) findViewById(R.id.imb1);
-        Books= (ImageButton) findViewById(R.id.imb2);
+        ImageButton Qr= (ImageButton) findViewById(R.id.imb1);
+        ImageButton Books= (ImageButton) findViewById(R.id.imb2);
 
-        String[] sections={"Hello User","Home","History", "Due Amount to be Paid", "Check Latest books", "Search for books."};
+        String[] sections={"BookSphere","Home", "Due Amount", "Latest Books", "Search Books", "Logout"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, sections);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spn.setAdapter(adapter);
@@ -52,28 +52,51 @@ public class library extends AppCompatActivity{
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 String selectedSection = (String) parentView.getItemAtPosition(position);
-                if (selectedSection.equals("History")) {
-                    Intent intent = new Intent(library.this, HistoryActivity.class);
-                    startActivity(intent);
-                } else if (selectedSection.equals("Home")) {
-                    Intent intent = new Intent(library.this, library.class);
+                if (selectedSection.equals("Home")) {
+                    Intent intent = new Intent(getApplicationContext(), library.class);
                     startActivity(intent);
                 }
-                else if (selectedSection.equals("Due Amount to be Paid")) {
-                    Intent intent = new Intent(library.this, DueAmountActivity.class);
+                else if (selectedSection.equals("Due Amount")) {
+                    Intent intent = new Intent(getApplicationContext(), DueAmountActivity.class);
                     startActivity(intent);
-                } else if (selectedSection.equals("Check Latest books")) {
-                    Intent intent = new Intent(library.this, LatestBooksActivity.class);
+                } else if (selectedSection.equals("Latest Books")) {
+                    Intent intent = new Intent(getApplicationContext(), LatestBooksActivity.class);
+                    intent.putExtra(name2,name);
                     startActivity(intent);
-                } else if(selectedSection.equals("Search for books"))
+                }
+                else if(selectedSection.equals("Search Books"))
                 {
-                    Intent intent=new Intent(library.this, SearchBooksActivity.class);
+                    Intent ii7 = new Intent(getApplicationContext(), SearchBooksActivity.class);
+                    startActivity(ii7);
+                }
+                else if(selectedSection.equals("Logout"))
+                {
+                    Intent intent=new Intent(library.this, MainActivity.class);
                     startActivity(intent);
                 }
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
                 // Do nothing here if no item is selected
+            }
+        });
+
+        Qr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ii2 = new Intent(library.this, scanpage.class);
+                ii2.putExtra(name2,name);
+                startActivity(ii2);
+            }
+        });
+
+        Books.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i2 = new Intent(library.this, main_book.class);
+                i2.putExtra(name2,name);
+                startActivity(i2);
             }
         });
     }
@@ -85,19 +108,6 @@ public class library extends AppCompatActivity{
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(this, "Error occurred: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
-        if(intentResult != null){
-            String contents = intentResult.getContents();
-            if(contents != null){
-                Toast.makeText(this, "Code Scanned!", Toast.LENGTH_SHORT).show();
-            }
-        }else {
-            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 }

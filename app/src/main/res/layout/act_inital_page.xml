@@ -15,6 +15,7 @@
 
     <Spinner
         android:id="@+id/spinner"
+        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -41,8 +42,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
         android:src="@drawable/qricon"
-        android:scaleType="fitCenter"
-        />
+        android:scaleType="fitCenter" />
 
 
     <View
@@ -76,7 +76,6 @@
         android:layout_marginTop="450dp"
         android:scaleType="fitCenter"
         android:src="@drawable/books"
-        android:onClick="books"
         />
 
 

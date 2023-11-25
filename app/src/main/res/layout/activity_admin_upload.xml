@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Upload"
+    android:background="@color/red">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="45dp"
+        android:textColor="@color/white"
+        android:text="Admin Home"
+        android:textSize="30dp"/>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"
+        android:id="@+id/bt1"
+        android:text="Add Book"
+        android:textSize="28dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/red" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/b1"
+        android:layout_below="@id/bt1"
+        android:text="Remove Book"
+        android:textSize="28dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/red" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/b1"
+        android:id="@+id/b2"
+        android:text="Issue Book to User"
+        android:textSize="28dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/red" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/b2"
+        android:layout_marginTop="50dp"
+        android:id="@+id/b3"
+        android:text="Collect Fine"
+        android:textSize="28dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/red" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/b3"
+        android:layout_marginTop="50dp"
+        android:id="@+id/logout"
+        android:text="Logout"
+        android:textSize="28dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/red" />
+
+</RelativeLayout>
