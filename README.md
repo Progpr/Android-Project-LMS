@@ -46,10 +46,6 @@ enhances convenience by eliminating manual sign-in processes.
 - **User Interfaces:** Separate interfaces for students and administrators.
 - **Student Features:** Browse library collections, borrow books, and utilize QR code integration for quick entry.
 - **Firebase Integration:** Utilizes Firebase Realtime Database for secure storage and Firebase Authentication for login integrity.
-## Screenshots
 
-![App Screenshot]()
+  ![353db0e2-6aed-4995-8d98-2ed9cc76012e](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/5a506cd8-b5a6-4958-870e-7fa5b7a3edad)
 
-<details><summary>Opening Screen</summary>
-  ![](meta/353db0e2-6aed-4995-8d98-2ed9cc76012e.JPG)
-</details>
