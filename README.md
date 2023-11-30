@@ -47,5 +47,23 @@ enhances convenience by eliminating manual sign-in processes.
 - **Student Features:** Browse library collections, borrow books, and utilize QR code integration for quick entry.
 - **Firebase Integration:** Utilizes Firebase Realtime Database for secure storage and Firebase Authentication for login integrity.
 
-  ![353db0e2-6aed-4995-8d98-2ed9cc76012e](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/5a506cd8-b5a6-4958-870e-7fa5b7a3edad)
+## Screenshots
+
++ Opening Page:
+   ![Opening Page](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/45525b34-c174-477b-8616-bc7c60bb7a4a)
+
++ User Signup Page:
+  ![user signup page](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/e92e208d-9c76-4c27-b31f-19ed0f929b88)
+
++ Admin Signup Page:
+  ![admin sign up page](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/94ae38eb-14d9-42c3-abd0-bcb856a07d59)
+
++ User Home Page:
+  ![user home page](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/c7c394c8-03cf-493b-b253-e6446a3cd52c)
+
++ Admin Home Page:
+  ![Admin home page](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/e8f47527-5188-44fb-b97d-b82861a6cad2)
+
++ Signing into the library page (QR Code Scanner):
+  ![QR code page](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/2d56b9f7-3a96-4cda-87eb-0977ee878030)
 
