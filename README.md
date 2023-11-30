@@ -51,5 +51,5 @@ enhances convenience by eliminating manual sign-in processes.
 ![App Screenshot]()
 
 <details><summary>Opening Screen</summary>
-  ![]((https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/67249933-a288-4d84-885f-9acc12216fc6))
+  ![](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/67249933-a288-4d84-885f-9acc12216fc6)
 </details>
