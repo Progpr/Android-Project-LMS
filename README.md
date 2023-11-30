@@ -35,7 +35,7 @@ enhances convenience by eliminating manual sign-in processes.
 **Additional Libraries and Frameworks** - Throughout the development process, additional libraries and frameworks were employed to enhance the functionality and user experience of the app. These include libraries for UI design, user navigation, and data manipulation, ensuring a smooth and visually appealing experience for both students and administrators.
 
 
-## Tech Stack
+## TechStack
 
 + [Android Studio Giraffe 2022.3.1 Patch 4 for Windows](https://developer.android.com/studio/): Developed for Android devices.
 
