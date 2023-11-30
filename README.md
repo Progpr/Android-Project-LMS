@@ -1,7 +1,7 @@
 
 # BookSphere - A library Management App
 
-                                                  ![booksphere](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/62b65334-49fa-4c27-ab84-615060cdc1b6)
+  ![booksphere](https://github.com/Progpr/BookSphere-Library-Management-System/assets/95381092/62b65334-49fa-4c27-ab84-615060cdc1b6)
 
 
 The Library Management App is a comprehensive Android-based application developed for university use. It caters to both students and administrators, offering streamlined library operations and an enhanced user experience. The key features include distinct interfaces for students and administrators, QR code integration for seamless entry, and efficient management of student data, book information, and entry records through Firebase Realtime Database and Authentication.
